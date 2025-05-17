@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Memories with Dad</title>
+    <link rel="stylesheet" href="memories.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Some Memories</h1>
+      <div class="gallery">
+        <div class="photo">
+          <img
+            src="photos/photo3.jpg"
+            alt="Memory 1"
+          />
+        </div>
+        <div class="photo">
+          <img
+            src="photos/photo2.jpg"
+            alt="Memory 2"
+          />
+        </div>
+        <div class="photo">
+          <img
+            src="photos/photo1.jpg"
+            alt="Memory 3"
+          />
+        </div>
+        <div class="photo">
+          <img
+            src="photos/photo4.jpg"
+            alt="Memory 4"
+          />
+        </div>
+        <div class="photo">
+          <img
+            src="photos/photo5.jpg"
+            alt="Memory 5"
+          />
+        </div>
+        <div class="photo">
+          <img
+            src="photos/photo6.jpg"
+            alt="Memory 6"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="button-wrapper">
+      <a href="gift.html" class="next-button">Next Surprise 🎁</a>
+    </div>
+
+    <script>
+      // Fade-in animation when photo scrolls into view
+      const photos = document.querySelectorAll(".photo");
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("show");
+            }
+          });
+        },
+        {
+          threshold: 0.1,
+        }
+      );
+
+      photos.forEach((photo) => observer.observe(photo));
+    </script>
+  </body>
+</html>

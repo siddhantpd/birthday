@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Final Surprise</title>
+  <link rel="stylesheet" href="final.css" />
+</head>
+<body>
+  <div class="decorations">
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+  </div>
+
+  <div class="message">
+    <h1>This was the gift for you!! 🎂❤️</h1>
+    <p>This little website is just a small gift for you. Happy Birthday!</p>
+  </div>
+
+  <audio id="bgMusic" autoplay loop>
+    <source src="happy-birthday-334876.mp3" type="audio/mpeg" >
+    Your browser does not support the audio element.
+  </audio>
+
+  <!-- <audio class="hbd" src="happy-birthday-334876.mp3"  autoplay></audio> -->
+  <video src="happy-birthday-334876.mp3"autoplay></video>
+
+
+  <script>
+    // Ensure music plays on some devices after user interaction
+    window.addEventListener('click', () => {
+      document.getElementById('bgMusic').play();
+    });
+  </script>
+</body>
+</html>

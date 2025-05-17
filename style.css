@@ -1,0 +1,370 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #fddde6, #d5f4e6);
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  flex-direction: column;
+}
+
+.container {
+  z-index: 2;
+  padding: 20px;
+  max-width: 90%;
+  text-align: center;
+}
+
+.card {
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1s ease-in-out;
+}
+
+.card h1 {
+  font-size: 2rem;
+  color: #ff4081;
+  margin-bottom: 15px;
+}
+
+.card p {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+.password-container {
+  margin-top: 30px;
+}
+
+.password-container input,
+.password-container button {
+  width: 100%;
+  max-width: 300px;
+  padding: 15px;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  margin: 10px 0;
+  border: 2px solid #ff4081;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.password-container input {
+  background-color: #f8f8f8;
+}
+
+.password-container input:focus,
+.password-container button:focus {
+  border-color: #ff4081;
+  box-shadow: 0 0 10px rgba(255, 64, 129, 0.5);
+}
+
+.password-container button {
+  background-color: #ff4081;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.password-container button:hover {
+  background-color: #ff2a6d;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Flower and Leaves Growth Animation */
+.flower,
+.leaf {
+  position: absolute;
+  bottom: 0;
+  opacity: 0;
+  transform: scale(0);
+}
+
+.flower {
+  width: 50px;
+  height: 50px;
+  background-color: #ff4081; /* Pink Flower */
+  border-radius: 50%;
+  animation: flowerGrow 3s forwards ease-in-out;
+}
+
+.flower-1 {
+  left: 10%;
+  animation-delay: 1s;
+}
+
+.flower-2 {
+  left: 30%;
+  animation-delay: 2s;
+}
+
+.flower-3 {
+  left: 50%;
+  animation-delay: 3s;
+}
+
+.flower-4 {
+  left: 70%;
+  animation-delay: 4s;
+}
+
+.leaf {
+  width: 40px;
+  height: 20px;
+  background-color: #388e3c; /* Green leaves */
+  border-radius: 10px;
+  transform-origin: top center;
+  animation: leafGrow 3s forwards ease-in-out;
+}
+
+.leaf-1 {
+  left: 25%;
+  animation-delay: 2s;
+}
+
+.leaf-2 {
+  left: 60%;
+  animation-delay: 3s;
+}
+
+@keyframes flowerGrow {
+  0% {
+    opacity: 0;
+    transform: scale(0) translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes leafGrow {
+  0% {
+    opacity: 0;
+    transform: scale(0) rotate(90deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+.scene {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+  }
+  
+  .balloon-container {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  #balloon1 {
+    top: -150px;
+    animation: floatDown 3s ease-in-out forwards;
+  }
+  
+  #balloon2 {
+    top: -150px;
+    animation: floatDown 3s ease-in-out 3s forwards;
+  }
+  
+  .balloon {
+    width: 40px;
+    height: 55px;
+    background-color: #ff4da6;
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    position: relative;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: popBalloon 0.5s ease-in-out 3s forwards;
+  }
+  
+  .balloon::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 40px;
+    background: #555;
+    top: 55px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  /* .cake-part.base {
+    width: 100px;
+    height: 50px;
+    background-color: #8d4f2f;
+    border-radius: 10px 10px 0 0;
+    margin: 20px auto 0;
+    opacity: 0;
+    animation: showCakeBase 1s ease-in 3s forwards;
+  }
+  
+  .cake-part.icing {
+    width: 120px;
+    height: 40px;
+    background-color: #f8d7d0; /* Light pink icing */
+    /* border-radius: 10px 10px 0 0;
+    margin: 10px auto;
+    opacity: 0;
+    animation: showIcing 1s ease-in 6s forwards;
+  } */ 
+
+  .text-container {
+    /* border: 2px solid black; */
+    padding: 1rem;
+    margin-top: 200px;
+    background-color: #ff4081;
+    border-radius: 20%;
+  }
+  
+  @keyframes floatDown {
+    0% {
+      top: -150px;
+      opacity: 0;
+    }
+    100% {
+      top: 50%;
+      opacity: 1;
+    }
+  }
+  
+  @keyframes popBalloon {
+    to {
+      transform: scale(0);
+      opacity: 0;
+    }
+  }
+  
+  @keyframes showCakeBase {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes showIcing {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .cake-container {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.cake {
+  width: 100%;
+  height: 100px;
+  background: #ff9999;
+  border-radius: 10px 10px 0 0;
+  position: relative;
+  box-shadow: 0 8px 0 #cc6666;
+}
+
+.candles {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.candle {
+  width: 10px;
+  height: 30px;
+  background: #fff;
+  border-radius: 2px;
+  position: relative;
+}
+
+.candle::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 6px;
+  height: 10px;
+  background: radial-gradient(ellipse at center, #ff0 0%, #f90 70%);
+  border-radius: 50%;
+  animation: flicker 0.3s infinite;
+}
+
+@keyframes flicker {
+  0% { transform: translateX(-50%) scale(1); opacity: 1; }
+  50% { transform: translateX(-50%) scale(1.1); opacity: 0.8; }
+  100% { transform: translateX(-50%) scale(1); opacity: 1; }
+}
+
+#nextPageButton {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 15px 30px;
+  font-size: 1.2em;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+#nextPageButton:hover {
+  background-color: #45a049;
+}
